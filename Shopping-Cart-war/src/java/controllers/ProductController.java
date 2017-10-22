@@ -59,12 +59,30 @@ public class ProductController implements Serializable {
         manageCart.removeAll();
     }
     
-    public String authenticate() {
-        if(usersFacade.isAuthenticated(username, password)){
-            return "cart";
+    public String authenticate(String action) {
+        if(usersFacade.isUserLoggedIn() || usersFacade.isAuthenticated(username, password)){
+            return action;
         }
         return "login";
     }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    
+    
     
     
 }
