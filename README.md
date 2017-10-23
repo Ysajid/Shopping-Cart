@@ -7,4 +7,4 @@ A shopping cart management website using JavaEE
 Make tow tables
 * Products (Id [pk], name, description)
 * Users (username [pk], password)
-## [Trouble Shooting](../troubleshooting.md)
+## [Trouble Shooting](troubleshooting.md)
